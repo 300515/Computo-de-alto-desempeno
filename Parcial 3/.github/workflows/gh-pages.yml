@@ -3,7 +3,7 @@ name: Build and Deploy GitHub Pages
 on:
   push:
     branches:
-      - main  # Cambia esto si usas otro nombre de rama
+      - main 
 
 jobs:
   deploy:
@@ -12,14 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Generar gráfico con Python
-        run: |
-          pip install kaggle pandas matplotlib
-          python3 plot.py
-          mkdir -p docs
-          cp grafica.png docs/
-          touch docs/.nojekyll  # Asegurarse de que Jekyll esté deshabilitado
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
