@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gráfico de Salud Mental</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .descripcion {
+      font-size: 1.1em;
+      margin-top: 1em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <h1>Gráfico de Salud Mental</h1>
-  <img src="grafica.png" alt="Gráfico generado con Python" style="max-width: 90%;">
+  <div class="container">
+    <h1>Gráfico de Salud Mental</h1>
+    <p class="descripcion">
+      Este gráfico fue generado con Python a partir de un dataset sobre salud mental en estudiantes universitarios. 
+      El análisis explora las relaciones entre distintos factores como género, nivel de estrés, y acceso a recursos.
+    </p>
+    <img src="grafica.png" alt="Gráfico generado con Python">
+  </div>
 </body>
 </html>
