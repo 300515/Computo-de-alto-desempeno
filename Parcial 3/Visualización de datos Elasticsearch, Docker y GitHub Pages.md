@@ -1,4 +1,4 @@
-# Resumen del Proyecto: Visualización de Datos con GitHub Pages
+# Proyecto: Visualización de Datos con GitHub Pages
 ## 1.  Organización del Proyecto
 - Repositorio: `Computo-de-alto-desempeno`
 - Contenido del sitio web ubicado en la carpeta `Parcial 3/docs/`
@@ -52,7 +52,7 @@ jobs:
 - Error resuelto:
   > "You deploy from gh-pages to gh-pages. This operation is prohibited to protect your contents"
 
-## 6. 🌐 Resultado Final
+## 6.  Resultado Final
 - Sitio web publicado exitosamente en:
   ```
   https://300515.github.io/Computo-de-alto-desempeno/
