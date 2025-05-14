@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import kagglehub
 
-# Descargar y leer el dataset
+# Dataset de salud mental de estudiantes
 path = kagglehub.dataset_download("shariful07/student-mental-health")
 csv_path = path + "/Student Mental health.csv"
 
@@ -17,7 +17,7 @@ conteo.plot(kind='bar', stacked=True, figsize=(10, 6))
 plt.title("Ansiedad por curso")
 plt.xlabel("Curso")
 plt.ylabel("Cantidad de estudiantes")
-plt.xticks(rotation=90)  # Etiquetas verticales
+plt.xticks(rotation=90)  
 plt.tight_layout()
 plt.savefig("grafica.png")
 print("Gráfico guardado como grafica.png")
