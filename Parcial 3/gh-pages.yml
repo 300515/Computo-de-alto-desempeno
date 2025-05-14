@@ -1,0 +1,21 @@
+name: Build and Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Cambia a la rama principal desde la que quieres hacer el despliegue
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./docs
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_branch: gh-pages  # Despliega a la rama gh-pages
