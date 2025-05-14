@@ -1,0 +1,33 @@
+name: Build and Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Cambia esto si usas otro nombre de rama
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: Install dependencies
+        run: |
+          gem install jekyll bundler
+          bundle install
+
+      - name: Build the site
+        run: |
+          jekyll build -s docs -d docs/_site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./docs/_site
