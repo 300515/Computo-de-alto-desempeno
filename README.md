@@ -1,2 +1,2 @@
-# C-mputo-de-alto-desempeno
+# Computo-de-alto-desempeno
 Manden ayuda
