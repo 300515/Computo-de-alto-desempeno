@@ -3,7 +3,7 @@ name: Build and Deploy GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - gh-pages 
 
 jobs:
   deploy:
@@ -13,7 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Setup auth token
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.name "Your GitHub Name"
+          git config --global user.email "your-email@example.com"
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./docs
+          publish_branch: gh-pages
+          token: ${{ secrets.GH_TOKEN }}
